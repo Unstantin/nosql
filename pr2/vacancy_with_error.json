@@ -1,0 +1,44 @@
+[
+  {
+    "id": 0,
+    "name": "Программист Python",
+    "employer": 0,
+    "salary": 1300,
+    "currency": "$",
+    "key_skills": "хихи",
+    "metro": "Лубянка",
+    "address": "Никольская улица, 12, Москва",
+    "date_of_publish": "2024-12-06",
+    "count_of_responses": 103,
+    "without_experience": false,
+    "with_distance": true
+  },
+  {
+    "id": 1,
+    "name": "Программист Java",
+    "employer": 0,
+    "salary": 2000,
+    "currency": "$",
+    "key_skills": ["Spring"],
+    "metro": "Китай-город",
+    "address": "улица Маросейка, 3/13с1, Москва",
+    "date_of_publish": "2025-01-29",
+    "count_of_responses": 250,
+    "without_experience": false,
+    "with_distance": true
+  },
+  {
+    "id": 2,
+    "name": "Программист 1C",
+    "employer": 2,
+    "salary": 100000,
+    "currency": "₽",
+    "key_skills": [],
+    "metro": "Сокольники",
+    "address": "2-й Полевой переулок, 2к3, Москва",
+    "date_of_publish": "2025-02-05",
+    "count_of_responses": 76,
+    "without_experience": true,
+    "with_distance": false
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id": 0,
+    "name": "Yandex",
+    "average_score": 4.8
+  },
+  {
+    "id": 1,
+    "name": "Sber",
+    "average_score": 4.4
+  },
+  {
+    "id": 2,
+    "name": "Positive Technologies",
+    "average_score": 3.5
+  }
+]
+
+

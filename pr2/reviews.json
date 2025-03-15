@@ -1,0 +1,32 @@
+[
+  {
+    "id": 0,
+    "employer": 0,
+    "text": "Лучший работодатель!",
+    "position": "Начальник отдела",
+    "work_duration": 5,
+    "measure_of_work_duration": "лет",
+    "date_of_publish": "2025-03-13",
+    "score": 5
+  },
+  {
+    "id": 1,
+    "employer": 1,
+    "text": "Худший работодатель!",
+    "position": "Разработчик",
+    "work_duration": 1,
+    "measure_of_work_duration": "неделя",
+    "date_of_publish": "2025-02-11",
+    "score": 1
+  },
+  {
+    "id": 2,
+    "employer": 2,
+    "text": "Средний работодатель..",
+    "position": "Менеджер",
+    "work_duration": 2,
+    "measure_of_work_duration": "месяца",
+    "date_of_publish": "1846-11-05",
+    "score": 3
+  }
+]
