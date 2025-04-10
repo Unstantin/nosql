@@ -1,0 +1,80 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "description": "Уникальный идентификатор вакансии (Primary Key)"
+      },
+      "name": {
+        "type": "string",
+        "description": "Название вакансии"
+      },
+      "employer": {
+        "type": "integer",
+        "description": "ID работодателя (Foreign Key)"
+      },
+      "salary": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Предлагаемая заработная плата (неотрицательное число)"
+      },
+      "currency": {
+        "type": "string",
+        "pattern": "^[A-Z]{3}$",
+        "description": "Валюта (3 заглавные буквы, например: RUB, USD)"
+      },
+      "key_skills": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 0,
+        "description": "Ключевые навыки"
+      },
+      "metro": {
+        "type": "string",
+        "description": "Станция метро"
+      },
+      "address": {
+        "type": "string",
+        "description": "Адрес"
+      },
+      "date_of_publish": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Дата публикации (ISO 8601)"
+      },
+      "count_of_responses": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Количество откликов (неотрицательное число)"
+      },
+      "without_experience": {
+        "type": "boolean",
+        "description": "Можно ли без опыта"
+      },
+      "with_distance": {
+        "type": "boolean",
+        "description": "Можно ли удаленно"
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "employer",
+      "salary",
+      "currency",
+      "key_skills",
+      "metro",
+      "address",
+      "date_of_publish",
+      "count_of_responses",
+      "without_experience",
+      "with_distance"
+    ]
+  }
+}

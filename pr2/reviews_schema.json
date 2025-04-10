@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "Уникальный идентификатор отзыва (Primary Key)"
+      },
+      "employer": {
+        "type": "integer",
+        "minimum": 0,
+        "description": "ID работодателя (Foreign Key)"
+      },
+      "text": {
+        "type": "string",
+        "description": "Текст комментария"
+      },
+      "position": {
+        "type": "string",
+        "description": "Занимаемая должность"
+      },
+      "work_duration": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Срок работы (положительное целое число)"
+      },
+      "measure_of_work_duration": {
+        "type": "string",
+        "pattern": "^[^0-9]*$",
+        "description": "Мера исчисления срока работы (без цифр)"
+      },
+      "date_of_publish": {
+        "type": "string",
+        "format": "date",
+        "description": "Дата написания отзыва (YYYY-MM-DD)"
+      },
+      "score": {
+        "type": "integer",
+        "minimum": 1,
+        "maximum": 5,
+        "description": "Оценка (целое число от 1 до 5)"
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "employer",
+      "text",
+      "position",
+      "work_duration",
+      "measure_of_work_duration",
+      "date_of_publish",
+      "score"
+    ]
+  }
+}

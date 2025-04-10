@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "integer",
+        "description": "Уникальный идентификатор работодателя (Primary Key)"
+      },
+      "name": {
+        "type": "string",
+        "description": "Название работодателя"
+      },
+      "average_score": {
+        "type": "number",
+        "minimum": 1.0,
+        "maximum": 5.0,
+        "multipleOf": 0.01,
+        "description": "Средняя оценка (от 1.00 до 5.00 с точностью до 2 знаков)"
+      }
+    },
+    "additionalProperties": false,
+    "required": [
+      "id",
+      "name",
+      "average_score"
+    ]
+  }
+}
