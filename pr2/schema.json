@@ -1,0 +1,171 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "employers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Уникальный идентификатор работодателя (Primary Key)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Название работодателя"
+          },
+          "average_score": {
+            "type": "number",
+            "minimum": 1.0,
+            "maximum": 5.0,
+            "multipleOf": 0.01,
+            "description": "Средняя оценка (от 1.00 до 5.00 с точностью до 2 знаков)"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "average_score"
+        ]
+      }
+    },
+    "vacancies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "description": "Уникальный идентификатор вакансии (Primary Key)"
+          },
+          "name": {
+            "type": "string",
+            "description": "Название вакансии"
+          },
+          "employer": {
+            "type": "string",
+            "description": "Работодатель"
+          },
+          "salary": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Предлагаемая заработная плата (неотрицательное число)"
+          },
+          "currency": {
+            "type": "string",
+            "pattern": "^[A-Z]{3}$",
+            "description": "Валюта (3 заглавные буквы, например: RUB, USD)"
+          },
+          "key_skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 0,
+            "description": "Ключевые навыки"
+          },
+          "metro": {
+            "type": "string",
+            "description": "Станция метро"
+          },
+          "address": {
+            "type": "string",
+            "description": "Адрес"
+          },
+          "date_of_publish": {
+            "type": "string",
+            "pattern": "(((19|20)([2468][048]|[13579][26]|0[48])|2000)[/-]02[/-]29|((19|20)[0-9]{2}[/-](0[469]|11)[/-](0[1-9]|[12][0-9]|30)|(19|20)[0-9]{2}[/-](0[13578]|1[02])[/-](0[1-9]|[12][0-9]|3[01])|(19|20)[0-9]{2}[/-]02[/-](0[1-9]|1[0-9]|2[0-8])))",
+            "description": "Дата публикации (ISO 8601)"
+          },
+          "count_of_responses": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Количество откликов (неотрицательное число)"
+          },
+          "without_experience": {
+            "type": "boolean",
+            "description": "Можно ли без опыта"
+          },
+          "with_distance": {
+            "type": "boolean",
+            "description": "Можно ли удаленно"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "employer",
+          "salary",
+          "currency",
+          "key_skills",
+          "metro",
+          "address",
+          "date_of_publish",
+          "count_of_responses",
+          "without_experience",
+          "with_distance"
+        ]
+      }
+    },
+    "reviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Уникальный идентификатор отзыва (Primary Key)"
+          },
+          "employer": {
+            "type": "string",
+            "description": "Работодатель"
+          },
+          "text": {
+            "type": "string",
+            "description": "Текст комментария"
+          },
+          "position": {
+            "type": "string",
+            "description": "Занимаемая должность"
+          },
+          "work_duration": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "Срок работы (положительное целое число)"
+          },
+          "measure_of_work_duration": {
+            "type": "string",
+            "pattern": "^[^0-9]*$",
+            "description": "Мера исчисления срока работы (без цифр)"
+          },
+          "date_of_publish": {
+           "type": "string",
+            "pattern": "(((19|20)([2468][048]|[13579][26]|0[48])|2000)[/-]02[/-]29|((19|20)[0-9]{2}[/-](0[469]|11)[/-](0[1-9]|[12][0-9]|30)|(19|20)[0-9]{2}[/-](0[13578]|1[02])[/-](0[1-9]|[12][0-9]|3[01])|(19|20)[0-9]{2}[/-]02[/-](0[1-9]|1[0-9]|2[0-8])))",
+            "description": "Дата написания отзыва (YYYY-MM-DD)"
+          },
+          "score": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "description": "Оценка (целое число от 1 до 5)"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "employer",
+          "text",
+          "position",
+          "work_duration",
+          "measure_of_work_duration",
+          "date_of_publish",
+          "score"
+        ]
+      }
+    }
+  }
+}

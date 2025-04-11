@@ -1,0 +1,95 @@
+{
+  "employers": [
+    {
+      "id": 0,
+      "name": "Yandex",
+      "average_score": 4.82
+    },
+    {
+      "id": 1,
+      "name": "Sber",
+      "average_score": 4.41
+    },
+    {
+      "id": 2,
+      "name": "Positive Technologies",
+      "average_score": 3.53
+    }
+  ],
+  "vacancies": [
+    {
+      "id": 0,
+      "name": "Программист Python",
+      "employer": "Yandex",
+      "salary": 1300,
+      "currency": "USD",
+      "key_skills": ["Flask", "Mongo"],
+      "metro": "Лубянка",
+      "address": "Никольская улица, 12, Москва",
+      "date_of_publish": "2024-12-06",
+      "count_of_responses": 103,
+      "without_experience": false,
+      "with_distance": true
+    },
+    {
+      "id": 1,
+      "name": "Программист Java",
+      "employer": "Sber",
+      "salary": 2000,
+      "currency": "USD",
+      "key_skills": ["Spring"],
+      "metro": "Китай-город",
+      "address": "улица Маросейка, 3/13с1, Москва",
+      "date_of_publish": "2025-01-30",
+      "count_of_responses": 250,
+      "without_experience": false,
+      "with_distance": true
+    },
+    {
+      "id": 2,
+      "name": "Программист 1C",
+      "employer": "Sber",
+      "salary": 100000,
+      "currency": "RUB",
+      "key_skills": [],
+      "metro": "Сокольники",
+      "address": "2-й Полевой переулок, 2к3, Москва",
+      "date_of_publish": "2025-02-05",
+      "count_of_responses": 76,
+      "without_experience": true,
+      "with_distance": false
+    }
+  ],
+  "reviews": [
+    {
+      "id": 0,
+      "employer": "Yandex",
+      "text": "Лучший работодатель!",
+      "position": "Начальник отдела",
+      "work_duration": 5,
+      "measure_of_work_duration": "лет",
+      "date_of_publish": "2025-03-13",
+      "score": 5
+    },
+    {
+      "id": 1,
+      "employer": "Sber",
+      "text": "Худший работодатель!",
+      "position": "Разработчик",
+      "work_duration": 1,
+      "measure_of_work_duration": "неделя",
+      "date_of_publish": "2025-02-11",
+      "score": 1
+    },
+    {
+      "id": 2,
+      "employer": "Sber",
+      "text": "Средний работодатель..",
+      "position": "Менеджер",
+      "work_duration": 2,
+      "measure_of_work_duration": "месяца",
+      "date_of_publish": "1946-11-05",
+      "score": 3
+    }
+  ]
+}
