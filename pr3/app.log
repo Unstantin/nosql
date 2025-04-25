@@ -1,0 +1,6 @@
+2025-04-25 14:56:44,541 - fastapi - INFO - Это INFO сообщение
+2025-04-25 14:56:44,541 - fastapi - WARNING - Это WARNING сообщение
+2025-04-25 14:56:44,541 - fastapi - ERROR - Это ERROR сообщение
+2025-04-25 14:57:49,645 - fastapi - INFO - Checking chat: chat:58f62ca3-adf8-44c2-acb9-bcfb7317ae85, exists: 1
+2025-04-25 15:05:26,244 - fastapi - INFO - Checking chat: chat:71ded8cf-cbf2-4d29-84bb-fa915b7a8f1a, exists: 0
+2025-04-25 15:05:26,246 - fastapi - INFO - 71ded8cf-cbf2-4d29-84bb-fa915b7a8f1a
